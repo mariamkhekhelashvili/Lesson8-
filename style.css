@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.clouds {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.airplane {
+    position: absolute;
+    top: 60%;
+    left: -200px;
+    width: 180px;
+    transform: translateY(-50%);
+    animation: flyAcross 12s linear infinite;
+    z-index: 2;
+}
+
+@keyframes flyAcross {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 110vw;
+    }
+}
+
+.up-house {
+    position: absolute;
+    top: 35px;
+    right: -150px;
+    width: 270px;
+    z-index: 3;
+    animation: floatHouse 30s linear infinite;
+}
+
+@keyframes floatHouse {
+    0% {
+        right: -150px;
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        right: 110vw;
+        transform: translateY(0px);
+    }
+}
